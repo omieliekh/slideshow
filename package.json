@@ -1,0 +1,11 @@
+{
+  "name": "slideshow",
+  "version": "1.0.0",
+  "description": "Slideshow app for managing slide cards for kids",
+  "main": "index.html",
+  "author": "Oleksandr Mieliekh",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.12.4"
+  }
+}
