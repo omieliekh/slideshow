@@ -1,14 +1,48 @@
 <!DOCTYPE html>
-<html ng-app="slideshowApp">
+<html ng-app="app">
 <head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/angular-carousel/dist/angular-carousel.css">
+
 	<title>Slideshow App</title>
 </head>
 <body>
-	HELLO WORLD
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#/">Slider</a>
+			<button data-target="#navbar-main" data-toggle="collapse" type="button" class="navbar-toggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="navbar-main" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="#/">Main Page</a>
+				</li>
+				<li>
+					<a href="#/test-page">Test Page</a>
+				</li>
+			</ul>
 
+		</div>
+		</div>
+	</div>
 
+	<div class="container" style="height: 60px;"></div>
 
+	<div class="container" ui-view="main"></div>
+
+	<script src="/vendor/jquery/dist/jquery.js"></script>
+	<script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="/vendor/angular/angular.js"></script>
+	<script src="/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="/vendor/angular-touch/angular-touch.js"></script>
+	<script src="/vendor/angular-carousel/dist/angular-carousel.js"></script>
+	
 	<script src="/src/app/app.js"></script>
+	<script src="/src/app/test-page/test-page.js"></script>
 </body>
 </html>
