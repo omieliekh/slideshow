@@ -7,31 +7,36 @@
 	<title>Slideshow App</title>
 </head>
 <body>
-	<div class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar navbar-default navbar-fixed-top" nav-bar>
 		<div class="container">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#/">Slider</a>
-			<button data-target="#navbar-main" data-toggle="collapse" type="button" class="navbar-toggle">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-		</div>
-		<div id="navbar-main" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				<li>
-					<a href="#/">Main Page</a>
-				</li>
-				<li>
-					<a href="#/test-page">Test Page</a>
-				</li>
-			</ul>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">Slider</a>
+                <button data-target="#navbar-main" data-toggle="collapse" type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/">Main Page</a>
+                    </li>
+                    <li>
+                        <a href="#/test-page">Test Page</a>
+                    </li>
+                </ul>
 
-		</div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="" ng-click="makeFullscreen()">Fullscreen</a>
+                    </li>
+                </ul>
+            </div>
 		</div>
 	</div>
 
-	<div class="container" style="height: 60px;"></div>
+    <div class="container" style="height: 51px;"></div>
 
 	<div class="container" ui-view="main"></div>
 

@@ -27,6 +27,23 @@ angular.module( 'app', [
 	});
 
 
+
+}])
+
+.directive("navBar", ['$timeout', function($timeout) {
+    return {
+        restrict: 'EAC',
+        replace: true,
+        controller: function($scope, $element, $attrs){
+
+        },
+
+        link: function(scope, element, attrs){
+            scope.makeFullscreen = function () {
+                $('[ui-view]').addClass('container-fullscreen');
+            };
+        }
+    };
 }])
 
 ;
