@@ -49,3 +49,38 @@
     }
   }
 }
+
+.shadow-sm{
+	box-shadow: 0 1px 2px 0 @gray;
+
+	&:hover{
+    	box-shadow: 0 1px 3px 1px @brand-primary;
+    }
+}
+
+.slideshow-item{
+	background-color: @gray-lighter;
+    background-image: url("/src/images/thumb/1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    transform: translateX(16px);
+
+    & + .slideshow-item{
+    	position: absolute;
+    	top: 0;
+    	left: 15px;
+    	width: calc(~"100% - 30px");
+    	transform: rotateX(0deg) translateX(4px) translateY(20px) skew(0deg, 8deg) rotateY(-20deg);
+
+    	& + .slideshow-item{
+			transform: rotateX(0deg) translateX(-10px) translateY(38px) skew(0deg, 16deg) rotateY(-30deg);    		
+    	}
+    }
+}
