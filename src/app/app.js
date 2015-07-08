@@ -9,7 +9,7 @@ angular.module( 'app', [
 		url: '/',
 		views: {
 			"main": {
-				controller: 'AppCtrl',
+				controller: 'MainPageCtrl',
 				templateUrl: 'app/app.html'
 			}
 		},
@@ -19,14 +19,17 @@ angular.module( 'app', [
 	$urlRouterProvider.otherwise('/');
 }])
 
-.controller( 'AppCtrl', ['$scope', '$location', function ( $scope, $location ) {
-	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-		if ( angular.isDefined( toState.data.pageTitle ) ) {
-			$scope.pageTitle = toState.data.pageTitle;
-		}
-	});
+.controller( 'AppCtrl', ['$scope', '$rootScope', '$location', function ( $scope, $rootScope, $location ) {
+    $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+        console.log('arguments: ', arguments);
 
+        $rootScope.pageTitle = toState.data.pageTitle || null;
+        $rootScope.containerClass = toState.data.containerClass || null;
+    });
 
+}])
+
+.controller( 'MainPageCtrl', ['$scope', '$rootScope', '$location', function ( $scope, $rootScope, $location ) {
 
 }])
 

@@ -11,7 +11,10 @@ angular.module( 'testPage', [
 				templateUrl: 'app/test-page/test-page.html'
 			}
 		},
-		data:{ pageTitle: 'Test Page' }
+		data:{
+            pageTitle: 'Test Page',
+            containerClass: 'fullscreen-view'
+        }
 	});
 }])
 

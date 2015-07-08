@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" ng-controller="AppCtrl">
 <head>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" type="text/css" href="/vendor/angular-carousel/dist/angular-carousel.css">
 
-	<title>Slideshow App</title>
+	<title>Slideshow App - {{pageTitle}}</title>
 </head>
 <body>
 	<div class="navbar navbar-default navbar-fixed-top" nav-bar>
@@ -38,7 +38,7 @@
 
     <div class="container" style="height: 51px;"></div>
 
-	<div class="container" ui-view="main"></div>
+	<div class="container {{containerClass}}" ui-view="main"></div>
 
 	<script src="/vendor/jquery/dist/jquery.js"></script>
 	<script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
